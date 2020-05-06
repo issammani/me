@@ -1,0 +1,57 @@
+// Global variable definitions
+$main-bg-color: #000;
+$main-text-color: #fff;
+$main-gray-color: #c4c4c4;
+
+$main-font: 'Poppins', sans-serif;
+
+$space-separator: 50px;
+
+$margin-side-xl: 200px;
+$margin-side-l: 100px;
+$margin-side-md: 50px;
+$margin-side-s: 40px;
+
+// Grid Mixin
+@mixin grid($cols: 12) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    @include grid(); 
+    width: 100%;
+    min-height: 100vh;
+    background: $main-bg-color;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper__child{
+    padding-left: $margin-side-xl; 
+    padding-right: $margin-side-xl; 
+    @media screen and (max-width: 600px){
+        padding-left: $margin-side-s; 
+        padding-right: $margin-side-s; 
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1000px){
+        padding-left: $margin-side-md; 
+        padding-right: $margin-side-md;  
+    }
+
+    @media screen and (min-width: 1001px) and (max-width: 1600px){
+        padding-left: $margin-side-l; 
+        padding-right: $margin-side-l; 
+    }
+}

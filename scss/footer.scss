@@ -1,0 +1,15 @@
+@import 'main';
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-column: 1/13;
+    text-align: center;
+    color: $main-text-color;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 16px;
+    img{
+        width: 20px;
+    }
+}

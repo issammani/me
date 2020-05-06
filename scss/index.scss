@@ -1,0 +1,58 @@
+@import 'main';
+
+main.profile{
+    grid-column: 1/13;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .profile__image{
+        img{
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    .profile__name{
+        margin: 20px 0px;
+        p{
+            font-family:$main-font;
+            color: $main-text-color;
+            font-weight: 500;
+            font-size: 35px;
+            @media screen and (max-width: 700px){
+                font-size: 28px;
+            }
+        }
+    }
+
+    .profile__description{
+        margin: 20px 0px;
+        p{
+            font-family:$main-font;
+            color: $main-gray-color;
+            font-weight: 400;
+            font-size: 25px;
+
+            margin: 10px 0px;
+
+            @media screen and (max-width: 700px){
+                font-size: 20px;
+            }
+        }
+    }
+
+    .profile__socials{
+        margin: 20px 0px;
+        a{
+            padding: 20px;
+            display: inline-block;
+            width: 25px;
+            img{
+                filter: invert(98%) sepia(4%) saturate(46%) hue-rotate(245deg) brightness(120%) contrast(100%);
+                width: 100%;
+
+            }
+        }
+    }
+}

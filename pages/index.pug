@@ -1,0 +1,21 @@
+extends includes/layout.pug
+
+block title
+    title Issam Mani - Fullstack web developer
+
+block content
+        main.profile.wrapper__child
+            div.profile__image
+                img(src="/images/profile.jpg" alt="Issam Mani - Profile Picture")
+            div.profile__name
+                p Issam Mani
+            div.profile__description
+                p Freelance Web Developer
+                p Developer with a web performance complex
+            div.profile__socials
+                a(href="#") #[img(src="/images/twitter.svg" class="icon__white" alt="Twitter Icon")]
+                a(href="#") #[img(src="/images/linkedin.svg" class="icon__white" alt="LinkedIn Icon")]
+                a(href="#") #[img(src="/images/github.svg" class="icon__white" alt="Github Icon")]
+                a(href="#") #[img(src="/images/email.svg" class="icon__white" alt="E-Mail Icon")]
+        include includes/footer
+block script

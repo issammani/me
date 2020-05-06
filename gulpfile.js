@@ -26,7 +26,7 @@ const del = require('del');
 
 const rename = require('gulp-rename');
 
-const config = require('./config');
+// const config = require('./config');
 
 const pxtorem = require('gulp-pxtorem');
 
@@ -81,5 +81,5 @@ gulp.task('dev-clean', () =>
     del('dev')
 );
 
-gulp.task('dev', gulp.series(['dev-clean','dev-sass', 'dev-styles', 'dev-js', 'dev-pug','dev-images', 'dev-router']));
+gulp.task('dev', gulp.series(['dev-clean','dev-sass', 'dev-styles', 'dev-js', 'dev-pug','dev-images']));
 
