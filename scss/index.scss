@@ -1,10 +1,28 @@
 @import 'main';
 
+.theme__toggle{
+    grid-column: 1/13;
+    justify-self: end;
+    svg{
+        cursor: pointer;
+        padding: 20px;
+        width: 30px;
+        height: auto;
+        transition: all .5s ease-in-out;
+
+        &:hover{
+            transform: rotateZ(20deg);
+        }
+    }
+}
+
 main.profile{
     grid-column: 1/13;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
+
+
     .profile__image{
         img{
             width: 150px;
@@ -17,7 +35,7 @@ main.profile{
         margin: 20px 0px;
         p{
             font-family:$main-font;
-            color: $main-text-color;
+            color: var(--main-text-color);
             font-weight: 500;
             font-size: 35px;
             @media screen and (max-width: 700px){
@@ -30,7 +48,7 @@ main.profile{
         margin: 20px 0px;
         p{
             font-family:$main-font;
-            color: $main-gray-color;
+            color: var(--main-gray-color);
             font-weight: 400;
             font-size: 25px;
 
@@ -38,6 +56,9 @@ main.profile{
 
             @media screen and (max-width: 700px){
                 font-size: 20px;
+                span.break_line{
+                    display: block;
+                }
             }
         }
     }
@@ -49,9 +70,7 @@ main.profile{
             display: inline-block;
             width: 25px;
             img{
-                filter: invert(98%) sepia(4%) saturate(46%) hue-rotate(245deg) brightness(120%) contrast(100%);
                 width: 100%;
-
             }
         }
     }

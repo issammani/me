@@ -1,7 +1,16 @@
-// Global variable definitions
-$main-bg-color: #000;
-$main-text-color: #fff;
-$main-gray-color: #c4c4c4;
+
+.theme-light {
+    --main-bg-color: #fff;
+    --main-text-color: #000;
+    --main-gray-color: #949494;
+}
+
+.theme-dark {
+    --main-bg-color: #000;
+    --main-text-color: #fff;
+    --main-gray-color: #c4c4c4;
+}
+
 
 $main-font: 'Poppins', sans-serif;
 
@@ -32,9 +41,13 @@ html, body{
     @include grid(); 
     width: 100%;
     min-height: 100vh;
-    background: $main-bg-color;
+    background: var(--main-bg-color);
     justify-content: center;
     align-items: center;
+}
+
+.black__white__filter{
+    filter: invert(98%) sepia(4%) saturate(46%) hue-rotate(245deg) brightness(120%) contrast(100%);
 }
 
 .wrapper__child{
