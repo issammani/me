@@ -19,19 +19,19 @@ block content
         main.profile.wrapper__child
             div.profile__image
                 picture
-                    source( type="image/webp" srcset="/images/profile-1x.webp 250w,/images/profile-2x.webp 500w,/images/profile-3x.webp 750w,/images/profile.webp 1200w")
-                    source( type="image/jpeg" srcset="/images/profile-1x.jpg 250w,/images/profile-2x.jpg 500w,/images/profile-3x.jpg 750w,/images/profile.jpg 1200w")
-                    img(src="/images/profile.jpg" alt="Issam Mani - Profile Picture")
+                    source( type="image/webp" srcset="images/profile-1x.webp 250w,images/profile-2x.webp 500w,images/profile-3x.webp 750w,images/profile.webp 1200w")
+                    source( type="image/jpeg" srcset="images/profile-1x.jpg 250w,images/profile-2x.jpg 500w,images/profile-3x.jpg 750w,images/profile.jpg 1200w")
+                    img(src="images/profile.jpg" alt="Issam Mani - Profile Picture")
             div.profile__name
                 p Issam Mani
             div.profile__description
                 p Freelance Web Developer
                 p Developer with a #[span.break_line web performance complex]
             div.profile__socials
-                a(href="#") #[img(src="/images/twitter.svg" class='black__white__filter' alt="Twitter Icon")]
-                a(href="#") #[img(src="/images/linkedin.svg" class='black__white__filter' alt="LinkedIn Icon")]
-                a(href="#") #[img(src="/images/github.svg" class='black__white__filter' alt="Github Icon")]
-                a(href="#") #[img(src="/images/email.svg" class='black__white__filter' alt="E-Mail Icon")]
+                a(href="#") #[img(src="images/twitter.svg" class='black__white__filter' alt="Twitter Icon")]
+                a(href="#") #[img(src="images/linkedin.svg" class='black__white__filter' alt="LinkedIn Icon")]
+                a(href="#") #[img(src="images/github.svg" class='black__white__filter' alt="Github Icon")]
+                a(href="#") #[img(src="images/email.svg" class='black__white__filter' alt="E-Mail Icon")]
         include includes/footer
 block script
-    script(src='/js/index.js')
+    script(src='js/index.js')
