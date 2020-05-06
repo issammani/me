@@ -18,7 +18,10 @@ block content
 
         main.profile.wrapper__child
             div.profile__image
-                img(src="/images/profile.jpg" alt="Issam Mani - Profile Picture")
+                picture
+                    source( type="image/webp" srcset="/images/profile-1x.webp 250w,/images/profile-2x.webp 500w,/images/profile-3x.webp 750w,/images/profile.webp 1200w")
+                    source( type="image/jpeg" srcset="/images/profile-1x.jpg 250w,/images/profile-2x.jpg 500w,/images/profile-3x.jpg 750w,/images/profile.jpg 1200w")
+                    img(src="/images/profile.jpg" alt="Issam Mani - Profile Picture")
             div.profile__name
                 p Issam Mani
             div.profile__description

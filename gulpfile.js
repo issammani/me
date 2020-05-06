@@ -83,3 +83,45 @@ gulp.task('dev-clean', () =>
 
 gulp.task('dev', gulp.series(['dev-clean','dev-sass', 'dev-styles', 'dev-js', 'dev-pug','dev-images', 'dev-manifest']));
 
+// ------ Build mode tasks
+gulp.task('build-sass', ()=> {
+    del('build/css/*.css');
+    return gulp.src('scss/*.scss')
+    .pipe(sass())
+    .pipe(pxtorem())
+    .pipe(concatCss('styles.min.css'))
+    .pipe(autoprefixer())
+    .pipe(minifyCss())
+    .pipe(gulp.dest('build/css/'));
+});
+
+gulp.task('build-js', ()=> 
+    gulp.src('js/*.js')
+    .pipe(minifyJS())
+    .pipe(gulp.dest('build/js/'))
+);
+
+gulp.task('build-images', ()=>
+    gulp.src('images/*.{jpeg,jpg,gif,svg,png,webp,ico}')
+    .pipe(imagemin())
+    .pipe(webp())
+    .pipe(gulp.dest('build/images/'))
+)
+
+gulp.task('build-pug', ()=> 
+  gulp.src('pages/*.pug')
+  .pipe(pug({pretty: false}))
+  .pipe(gulp.dest('build'))
+);
+
+gulp.task('build-manifest', () => {
+    return gulp.src(['site.webmanifest', 'browserconfig.xml'])
+    .pipe(minifyJS())
+    .pipe(gulp.dest('build/'));
+});
+
+gulp.task('build-clean', () => 
+    del('build')
+);
+
+gulp.task('build', gulp.series(['build-clean','build-pug', 'build-sass',  'build-js', 'build-images', 'build-manifest']));
