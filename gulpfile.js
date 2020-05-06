@@ -62,7 +62,7 @@ gulp.task('dev-pug', ()=>
 );
 
 gulp.task('dev-manifest', () => {
-    gulp.src(['site.webmanifest', 'browserconfig.xml'])
+    return gulp.src(['site.webmanifest', 'browserconfig.xml'])
     .pipe(gulp.dest('dev/'))
 });
 
@@ -81,5 +81,5 @@ gulp.task('dev-clean', () =>
     del('dev')
 );
 
-gulp.task('dev', gulp.series(['dev-clean','dev-sass', 'dev-styles', 'dev-js', 'dev-pug','dev-images']));
+gulp.task('dev', gulp.series(['dev-clean','dev-sass', 'dev-styles', 'dev-js', 'dev-pug','dev-images', 'dev-manifest']));
 
