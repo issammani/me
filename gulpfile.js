@@ -61,6 +61,11 @@ gulp.task('dev-pug', ()=>
   .pipe(gulp.dest('dev'))
 );
 
+gulp.task('dev-manifest', () => {
+    gulp.src(['site.webmanifest', 'browserconfig.xml'])
+    .pipe(gulp.dest('dev/'))
+});
+
 
 
 // Watchers
