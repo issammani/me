@@ -1,0 +1,16 @@
+{
+  "name": "issammani.github.io",
+  "version": "1.0.0",
+  "description": "A minimalistic one-page portfolio for job applications.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "",
+    "dev": ""
+  },
+  "author": "Issam Mani",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
