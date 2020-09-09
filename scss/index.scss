@@ -48,6 +48,17 @@ main.profile{
                 animation-iteration-count: infinite;
                 transform-origin: 70% 70%;
                 display: inline-block;
+
+                img {
+                    height: 1.1em;
+                    width: 1.1em;
+                    margin: 0;
+                    padding: 0 .09em;
+                    vertical-align: -.18em;
+                    border: 0;
+                    display: inline-block;
+                    cursor: text;
+                }
             }
         }
     }
